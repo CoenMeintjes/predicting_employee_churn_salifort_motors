@@ -8,24 +8,18 @@ Employee churn, or the voluntary or involuntary departure of employees from a co
 
 The project consists of the following major steps:
 
-1. Data Exploration and Cleaning: Perform an initial exploration of the dataset, assess data quality, and handle missing values or outliers as necessary. Prepare the data for further analysis.
-
-2. Exploratory Data Analysis (EDA): Conduct in-depth exploratory analysis to gain insights into the dataset. Explore various features and their relationships with employee churn. Visualize key findings and trends.
-
-3. Feature Engineering: Engineer new features or transform existing ones that might improve the predictive performance of the classification models. This step aims to extract relevant information from the data that can better capture the factors contributing to employee churn.
-
-4. Predictive Modeling: Build and evaluate classification models to predict employee churn. Utilize machine learning algorithms such as logistic regression, decision trees, or random forests to train the models. Perform hyperparameter tuning and cross-validation to optimize model performance.
-
-5. Model Evaluation and Interpretation: Evaluate the trained models using appropriate evaluation metrics such as accuracy, precision, recall, and F1 score. Interpret the model results and identify the most important features contributing to employee churn.
-
-6. Recommendations and Conclusion: Summarize the key findings from the analysis and provide actionable recommendations for Salifort Motors based on the insights gained. Discuss limitations, potential future improvements, and the overall significance of the project.
+1. **Data Exploration and Cleaning:** Perform an initial exploration of the dataset, assess data quality, and handle missing values or outliers as necessary. Prepare the data for further analysis.
+2. **Exploratory Data Analysis (EDA):** Conduct in-depth exploratory analysis to gain insights into the dataset. Explore various features and their relationships with employee churn. Visualize key findings and trends.
+3. **Predictive Modeling:** Build and evaluate classification models to predict employee churn. Utilize machine learning algorithms such as logistic regression, decision trees, or random forests to train the models. Perform hyperparameter tuning and cross-validation to optimize model performance.
+4. **Model Evaluation and Interpretation:** Evaluate the trained models using appropriate evaluation metrics such as accuracy, precision, recall, and F1 score. Interpret the model results and identify the most important features contributing to employee churn.
+5. **Recommendations and Conclusion:** Summarize the key findings from the analysis and provide actionable recommendations for Salifort Motors based on the insights gained. Discuss limitations, potential future improvements, and the overall significance of the project.
 
 ## Repository Structure
 
 This repository is organized as follows:
 
 - `data/`: Contains the raw HR employee dataset
-- `model_results/`: Stores the pickle models of the machine learning models.
+- `model_files/`: Stores the pickle models of the machine learning models.
 - `project_notebook.ipynb`: is the complete project notebook which documents the entire step-by-step analysis and modeling process.
 
 ## Dependencies
