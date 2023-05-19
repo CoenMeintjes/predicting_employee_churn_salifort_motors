@@ -1,46 +1,49 @@
-# Employee Churn Analysis at Salifort Motors - Data Science Capstone Project 
+# Employee Churn Analysis at Salifort Motors
 
-This repository contains the code, documentation, and results for the Data Science Capstone Project completed as part of the Google Advanced Data Analytics Certificate. The project focuses on analyzing an HR employee dataset from Salifort Motors, a fictional company, with the objective of understanding the factors that impact employee churn. Exploratory data analysis (EDA) and predictive classification models were developed to gain insights and predict employee churn.
+This repository contains the code, documentation, and results for the end of course Capstone Project completed as part of the **Google Advanced Data Analytics Certificate**. The project focuses on analyzing an HR employee dataset from Salifort Motors, a fictional company, with the objective of understanding the factors that impact employee churn. Exploratory data analysis (EDA) and predictive classification models were developed to gain insights and predict whether an employee would leave the company.
 
 ## Project Overview
 
-Employee churn, or the voluntary or involuntary departure of employees from a company, can have significant impacts on business performance and productivity. The goal of this project is to analyze the HR employee dataset of Salifort Motors to identify factors that contribute to employee churn. By understanding these factors, the company can take proactive measures to retain valuable employees and improve overall employee satisfaction.
+Employee churn, the voluntary or involuntary departure of employees from a company, can have significant impacts on business performance and productivity as well as have significant financial implications for the company due to the resources that go into the hiring process. 
 
-The project consists of the following major steps:
+The goal of this project was to analyze the HR employee dataset of Salifort Motors to identify factors that contribute to employee turnover. By understanding these factors, the company can take proactive measures to retain valuable employees and improve overall employee satisfaction.
 
-1. Data Exploration and Cleaning: Perform an initial exploration of the dataset, assess data quality, and handle missing values or outliers as necessary. Prepare the data for further analysis.
+## Data Understanding
+The HR dataset contains 15000 rows and 10 features. The variable of interest that the project aimed to understand and explore was `left` which is a binary column indicating whether or not an employee left the company. There is a class imbalance in the data that is addressed in the project notebook.
 
-2. Exploratory Data Analysis (EDA): Conduct in-depth exploratory analysis to gain insights into the dataset. Explore various features and their relationships with employee churn. Visualize key findings and trends.
+![graph of employee left or stayed](images/employees-left-vs.-stayed.png)
 
-3. Feature Engineering: Engineer new features or transform existing ones that might improve the predictive performance of the classification models. This step aims to extract relevant information from the data that can better capture the factors contributing to employee churn.
+## Project Insights and Modelling
 
-4. Predictive Modeling: Build and evaluate classification models to predict employee churn. Utilize machine learning algorithms such as logistic regression, decision trees, or random forests to train the models. Perform hyperparameter tuning and cross-validation to optimize model performance.
+This project revealed that employees at Salifort are being overworked. US standard monthly average working hours are 160hrs/month however Salifort Motors employee average monthly hours exceeded this at 200hrs/month.
 
-5. Model Evaluation and Interpretation: Evaluate the trained models using appropriate evaluation metrics such as accuracy, precision, recall, and F1 score. Interpret the model results and identify the most important features contributing to employee churn.
+![histogram of average monthly working hours](images/ave.-monthly-hours-histogram.png)
 
-6. Recommendations and Conclusion: Summarize the key findings from the analysis and provide actionable recommendations for Salifort Motors based on the insights gained. Discuss limitations, potential future improvements, and the overall significance of the project.
+In order to contruct a classification model that could effectively be utilised by the company an iterative modelling process was conducted. This produced a final random forest model which proved to be very reliable it's ability to classify whether an employee would leave the company or not. It achieved the following performance scores:
 
-## Repository Structure
+![table of model scores](images/model-performance-scores.png)
 
-This repository is organized as follows:
+![confusion matrix](images/model-confusion-matrix.png)
 
-- `data/`: Contains the raw HR employee dataset
-- `model_results/`: Stores the pickle models of the machine learning models.
-- `project_notebook.ipynb`: is the complete project notebook which documents the entire step-by-step analysis and modeling process.
+The modeling process also revealed that the dataset features which had the biggest impact on whether an employee would leave or not were:
+1. `satisfaction_level`
+2. `number_project`
+3. `tenure`
+4. `ave_monthly_hrs`
+5. `last_evaluation`
 
-## Dependencies
+![important features](images/feature-importance.png)
 
-The project was implemented using Python programming language and various data science libraries. The main dependencies include:
+## Conclusion 
 
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- XGBClassifier
+By leveraging exploratory data analysis and building predictive classification models, valuable insights were gained, and accurate predictions of employee churn could be made. 
 
-## Conclusion
+Salifort motors can use this information to make data driven decision regarding their employees and company policy regarding work hours. 
 
-This Data Science Capstone Project provides a comprehensive analysis of the HR employee dataset from Salifort Motors, with a focus on understanding factors that impact employee churn. By leveraging exploratory data analysis and building predictive classification models, valuable insights were gained, and accurate predictions of employee churn were made. The project outcomes can be used to inform strategic decision-making and HR policies to improve employee retention and job satisfaction at Salifort Motors.
-
-Note: As this is a fictional project, the dataset and company mentioned are not real. The project was completed as part of the Google Advanced Data Analytics Certificate program and serves as a demonstration of data analysis and modeling skills.
+Some recommendations include:
+* Limiting the number of projects that employees are allowed to work on.
+* Updating and clarifying company policy regarding overtime work and remuneration which rewards hard work. 
+* The company should either reward employees for working longer hours, or not require them to do so. 
+* Management could be more explicit about workload and time off expectations 
+* Company work culture needs to be better understood through company-wide engagement on all levels and in all teams
+* Evaluation scores should be awarded in a way that rewards employees for behavioral patterns that are conducive to desired company culture and healthy work habits. 
